@@ -1,3 +1,9 @@
 <h1>Bienvenido Usuario</h1>
-<input type="text" [(ngModel)]="usuarioNombre">
-{{usuarioNombre}}
+
+<input type="text" [(ngModel)]="usuarioNombre" *ngIf="visible"/>
+
+<button (click)="(AgregarUsuario())" *ngIf="visible">Agregar</button>
+
+<div *ngFor="let usaurio of usuarios">
+  {{ usaurio }}
+</div>
