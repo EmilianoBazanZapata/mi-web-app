@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +25,9 @@ import { LibrosService } from './services/libros.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule],
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule],
   providers: [LibrosService],
   bootstrap: [AppComponent],
 })
