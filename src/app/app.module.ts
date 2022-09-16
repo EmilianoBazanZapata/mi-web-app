@@ -13,6 +13,8 @@ import { LibroComponent } from './Libro/libro.component';
 import { InicioComponent } from './inicio.component';
 
 import { LibrosService } from './services/libros.service';
+import { RegistrarComponent } from './seguridad/registrar/registrar.component';
+import { LoginComponent } from './seguridad/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LibrosService } from './services/libros.service';
     UsuarioComponent,
     LibrosComponent,
     LibroComponent,
-    InicioComponent
+    InicioComponent,
+    RegistrarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
