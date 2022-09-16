@@ -5,8 +5,7 @@ import { LibrosComponent } from './Libros/libros.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
-  { path: 'libros', component: LibrosComponent },
-  {}
+  { path: 'libros', component: LibrosComponent }
 ];
 
 @NgModule({

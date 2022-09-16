@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { UsuarioComponent } from './usuario.component';
 import { LibrosComponent } from './Libros/libros.component';
 import { LibroComponent } from './Libro/libro.component';
+import { InicioComponent } from './inicio.component';
 
 import { LibrosService } from './services/libros.service';
 
@@ -17,8 +18,12 @@ import { LibrosService } from './services/libros.service';
     UsuarioComponent,
     LibrosComponent,
     LibroComponent,
+    InicioComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule],
   providers: [LibrosService],
   bootstrap: [AppComponent],
 })
