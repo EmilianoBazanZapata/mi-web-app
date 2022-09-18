@@ -6,6 +6,7 @@ import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { UsuarioComponent } from './usuario.component';
 import { LibrosComponent } from './Libros/libros.component';
@@ -31,7 +32,8 @@ import { LoginComponent } from './seguridad/login/login.component';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule],
+    MaterialModule,
+    FlexLayoutModule],
   providers: [LibrosService],
   bootstrap: [AppComponent],
 })
