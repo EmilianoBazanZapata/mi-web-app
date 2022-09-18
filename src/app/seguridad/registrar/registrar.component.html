@@ -1,13 +1,27 @@
 <section>
-  <form fxLayout="column" fxLayoutAlign="center center">
+  <form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="registrarUsuario(f)">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Ingrese el E-mail</mat-label>
-      <input type="email" matInput placeholder="example@gmail.com" />
+      <input
+        type="email"
+        matInput
+        placeholder="example@gmail.com"
+        ngModel
+        name="email"
+      />
     </mat-form-field>
 
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Ingrese la Contraseña</mat-label>
-      <input type="password" matInput placeholder="Password" />
+      <input
+        type="password"
+        matInput
+        placeholder="Password"
+        ngModel
+        name="password"
+      />
     </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Guardar</button>
   </form>
 </section>
