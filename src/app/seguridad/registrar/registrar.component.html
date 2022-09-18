@@ -2,24 +2,16 @@
   <form fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="registrarUsuario(f)">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Ingrese el E-mail</mat-label>
-      <input
-        type="email"
-        matInput
-        placeholder="example@gmail.com"
-        ngModel
-        name="email"
-      />
+      <input type="email" matInput placeholder="example@gmail.com" ngModel name="email" email required
+        #emailInput="ngModel" />
+      <mat-error *ngIf="emailInput.hasError('required')">El email no puede estar en blanco</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">El email es invalido</mat-error>
     </mat-form-field>
 
-    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-form-field class="example-full-width" appearance="fill" hintLabel="El Password debe tener 7 caracteres">
       <mat-label>Ingrese la Contraseña</mat-label>
-      <input
-        type="password"
-        matInput
-        placeholder="Password"
-        ngModel
-        name="password"
-      />
+      <input type="password" matInput placeholder="Password" ngModel name="password" required minlength="7"/>
+      <mat-error>El Password debe tener mas de 7 caracteres</mat-error>
     </mat-form-field>
 
     <button mat-raised-button color="primary" type="submit">Guardar</button>
